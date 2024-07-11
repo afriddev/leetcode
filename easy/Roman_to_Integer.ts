@@ -1,3 +1,6 @@
+/**
+Space complexity - o(1)
+*/
 function romanToInt(s: string): number {
     const values = {
         I: 1,
