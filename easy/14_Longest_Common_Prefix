@@ -1,0 +1,16 @@
+function longestCommonPrefix(strs: string[]): string {
+    let index = 0
+    let checkString = strs[0]
+
+    for (let i = 1; i < strs?.length; i++) {
+        for (let j = 0; j < strs[i].length; j++) {
+            if (checkString[j] === strs[i][j]) {
+                index++
+            }
+            else break
+        }
+        checkString = strs[0].slice(0, index)
+        index = 0
+    }
+    return checkString;
+};
