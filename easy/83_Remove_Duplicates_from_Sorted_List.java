@@ -19,20 +19,19 @@ class Solution {
         while (current != null) {
             if (!hashSet.contains(current.val)) {
                 hashSet.add(current.val);
-            }
-            current = current.next;
-        }
-        for (int value : hashSet) {
-
+                
             if (list == null) {
-                list = new ListNode(value);
+                list = new ListNode(current.val);
                 lastNode = list;
             }
             else{
-                lastNode.next = new ListNode(value);
+                lastNode.next = new ListNode(current.val);
                 lastNode = lastNode.next;
             }
+            }
+            current = current.next;
         }
         return list;
     }
+
 }
